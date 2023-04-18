@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color:#00b06c ;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2 {
+            margin-top: 3%;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 35px;
+        }
+        form {
+            border: 1px solid #fff;
+            margin: 3% auto 8%;
+            width: 40%;
+            background-color: #fff;
+        }
+        .form-group {
+            margin-top: 4%;
+            margin-left: 5%;
+        }
+        label {
+            display: block;
+            margin-bottom: 2%;
+            text-transform: capitalize;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        input[type="text"] , textarea {
+            width: 94%;
+            padding: 10px;
+            outline: none;
+            border: 3px solid #619ac0;
+            border-radius: 3px;
+            font-size: 17px;
+            text-transform: capitalize;
+        }
+        select {
+            width: 90%;
+            padding: 10px;
+            outline: none;
+            border: 3px solid #619ac0;
+            border-radius: 3px;
+            font-size: 14px;
+            color: grey;
+            text-transform: capitalize;
+        }
+        select option:not(:nth-child(1)) {
+            font-style: 17px;
+            color: #000;
+            text-transform: capitalize;
+        }
+        textarea {
+            resize: none;
+            margin-bottom: 6%;
+        }
+        #ch-space {
+            margin-left: 2%;
+        }
+        button[type="submit"] {
+            width: 90%;
+            margin-left: 5%;
+            padding: 2px 0;
+            margin-bottom: 10%;
+            background-color: #06af60;
+            color: #000;
+            font-size: 25px;
+            text-transform: capitalize;
+            font-weight: 500;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        input::placeholder {
+            color: grey;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+        input:focus , select:focus{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>survey form</h2>
+    <form action="/demo" method="post">
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" name="name" id="name" placeholder="enter your name">
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" name="email" id="email" placeholder="enter your email">
+        </div>
+        <div class="form-group">
+            <label for="age">age</label>
+            <input type="text" name="age" id="age" placeholder="enter your age">
+        </div>
+        <div class="form-group">
+            <label>which option best describes you?</label>
+            <select name="desc" id="desc">
+                <option value="nothing">select option</option>
+                <option value="student">student</option>
+                <option value="professional">professional</option>
+                <option value="teacher">teacher</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>languages and frameworks known</label>
+            <label><input type="checkbox" name="c" value="C" id="c"><span id="ch-space">C</span></label>
+            <label><input type="checkbox" name="Ruby" value="Ruby" id="Ruby"><span id="ch-space">Ruby</span></label>
+            <label><input type="checkbox" name="c++" value="C++" id="c++"><span id="ch-space">C++</span></label>
+            <label><input type="checkbox" name="java" value="java" id="java"><span id="ch-space">java</span></label>
+            <label><input type="checkbox" name="javascript" value="javascript" id="javascript"><span id="ch-space">javascript</span></label>
+            <label><input type="checkbox" name="c#" value="c#" id="c#"><span id="ch-space">C#</span></label>
+            <label><input type="checkbox" name="spring" value="spring" id="spring"><span id="ch-space">spring</span></label>
+            <label><input type="checkbox" name="Django" value="Django" id="Django"><span id="ch-space">Django</span></label>
+            <label><input type="checkbox" name="dbms" value="dbms" id="dbms"><span id="ch-space">DBMS</span></label>
+            <label><input type="checkbox" name="React" value="React" id="React"><span id="ch-space">React</span></label> 
+        </div>
+        <div class="form-group">
+            <label>any comments or suggestions</label>
+            <textarea name="suggestions" id="suggestions" cols="10" rows="4"></textarea>
+        </div>
+        <div>
+            <button type="submit">submit</button>
+        </div>
+    </form>
+</body>
+</html>

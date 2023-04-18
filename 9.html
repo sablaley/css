@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create a form to accept details from a student for college registration. Think about what
+    inputs who will like to accept from the student. Design the form accordingly. You should
+    be using these tags compulsorily – input, label, radio button, check box, date, text area,
+    and button -->
+    <form action="/demo" method="get">
+        <fieldset>
+            <legend>Enter Student Details</legend>
+            <br><br>
+            <div>
+                <label for="nameid">Enter Your Name</label>&nbsp;&nbsp;
+                <input type="text" id="nameid" name="name" placeholder="Enter Your Name">
+            </div>
+            <br>
+            <div>
+                <label for="mobile">Enter Your Mobile Number</label>&nbsp;&nbsp;
+                <input type="number" id="mobile" name="mobile" placeholder="Enter Your mobile Number">
+            </div>
+            <br>
+            <div>
+                <label>Select Gender</label>&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male" value="Male"><label for="male">Male</label>&nbsp;&nbsp;
+                <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>&nbsp;&nbsp;
+            </div>
+            <br>
+            <div>
+                <label>Select Fav Game</label>&nbsp;&nbsp;
+                <input type="checkbox" value="Cricket" id="Cricket" name="Cricket"><label for="Cricket">Cricket</label>
+                <input type="checkbox" value="Football" id="Football" name="Football"><label for="Football">Football</label>
+                <input type="checkbox" value="Basketball" id="Basketball" name="Basketball"><label for="Basketball">Basketball</label>
+                <input type="checkbox" value="Volleyball" id="Volleyball" name="Volleyball"><label for="Volleyball">Volleyball</label>
+            </div>
+            <br>
+            <div>
+                <label for="dob">Enter Your Date Of Birth</label>&nbsp;&nbsp;
+                <input type="date" min="1975" max="2000">
+            </div>
+            <br>
+            <div>
+                <label>Enter Your  Address</label>
+                <br><br>
+                <textarea name="add" id="address" cols="100" rows="5"  placeholder="Enter Your Address"></textarea>
+            </div>
+            <br>
+            <div>
+                <label>Select School Name</label>&nbsp;&nbsp;
+                <select name="school" id="schoolid">
+                    <option value="nothing">Select School Name</option>
+                    <option value="terna school, diva">terna school, diva</option>
+                    <option value="dnyanprasarini, kalwa">dnyanprasarini, kalwa</option>
+                    <option value="hfijmop, bhandup">hfijmop, bhandup</option>
+                    <option value="kutunopof, vikroli">kutunopof, vikroli</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Choose Favorite Food</label>&nbsp;&nbsp;
+                <input type="text" name="food" id="food" list="foods" placeholder="Choose Favorite Food">
+                <datalist id="foods">
+                    <option value="nothing">select food</option>
+                    <option value="panipuri">panipuri</option>
+                    <option value="samosa">samosa</option>
+                </datalist>
+            </div>
+            <br><br>
+            <div>
+                <button type="submit">SUBMIT</button>
+            </div>
+            <br>
+        </fieldset>
+    </form>
+</body>
+</html>
